@@ -6,6 +6,20 @@
 
 
 
+integer的127-128存储在哪里
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ### 线程池的几种状态
@@ -17,7 +31,7 @@ private static final int RUNNING    = -1 << COUNT_BITS;// 运行
 private static final int SHUTDOWN   =  0 << COUNT_BITS;// 关闭
 private static final int STOP       =  1 << COUNT_BITS;// 停止
 private static final int TIDYING    =  2 << COUNT_BITS;// 整理
-private static final int TERMINATED =  3 << COUNT_BITS;// 已终止
+private static final int TERMINATED =  3 << COUNT_BITS;// 终止
 ```
 
 
@@ -64,10 +78,12 @@ private static final int TERMINATED =  3 << COUNT_BITS;// 已终止
 
 
 
--   为什么Worker继承AQS？
--   runWoker都干了哪些事？
--   我想在run方法真正执行自己业务代码的前后各自打印log怎么做？
+-   为什么`Worker`继承`AQS`？
+-   `runWoker`都干了哪些事？
+-   `run`方法执行异步任务的前后各自打印`log`怎么做？
 -   非核心线程是怎么结束的？核心线程又是怎么长期存活不会销毁的？
+-   `interruptIdleWorkers`入参为`true`是只中断一个空闲的`worker`，剩余空闲的`worker`是怎么通知到的？
+-   
 
 
 
@@ -200,7 +216,7 @@ public void execute(Runnable command) {
     if (isRunning(c) && workQueue.offer(command)) {
         // 重新获取线程池状态
         int recheck = ctl.get();
-        // 线程池非 RUNNING 且 删除删除任务成功
+        // 线程池非 RUNNING 且 删除任务成功
         if (! isRunning(recheck) && remove(command))
             // 线程池关闭，拒绝处理任务
             reject(command);
