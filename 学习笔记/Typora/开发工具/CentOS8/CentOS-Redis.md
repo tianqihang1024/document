@@ -164,11 +164,11 @@ docker pull redis:6.0.4
 
      会出现如下图所示，此时输入`yes`即可
 
-     ![image-20220819190523155](C:/Users/22489/OneDrive/%E7%94%B0%E5%A5%87%E6%9D%AD/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/TyporaImg/image-20220819190523155.png)
+     ![image-20220819190523155](../../../TyporaImg/image-20220819190523155.png)
 
      出现下图即为成功
 
-     ![image-20220819190702207](C:/Users/22489/OneDrive/%E7%94%B0%E5%A5%87%E6%9D%AD/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/TyporaImg/image-20220819190702207.png)
+     ![image-20220819190702207](../../../TyporaImg/image-20220819190702207.png)
 
 
 
@@ -192,7 +192,7 @@ docker pull redis:6.0.4
 
      显示如下图所示即为集群状态健康
 
-     ![image-20220819191314523](C:/Users/22489/OneDrive/%E7%94%B0%E5%A5%87%E6%9D%AD/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/TyporaImg/image-20220819191314523.png)
+     ![image-20220819191314523](../../../TyporaImg/image-20220819191314523.png)
 
      
 
@@ -204,7 +204,7 @@ docker pull redis:6.0.4
 
      显示如图所示
 
-     ![image-20220819191354009](C:/Users/22489/OneDrive/%E7%94%B0%E5%A5%87%E6%9D%AD/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/TyporaImg/image-20220819191354009.png)
+     ![image-20220819191354009](../../../TyporaImg/image-20220819191354009.png)
 
      注意看图中的`slave`,`master`,`myself`等关键字。
 
@@ -225,7 +225,7 @@ docker pull redis:6.0.4
 
      **注意：这里根据切片自动切换到了该数据分片所在的节点上，所以下面可以看到连接的节点变为了`192.168.71.128:6380`**
 
-     ![image-20220819191629270](C:/Users/22489/OneDrive/%E7%94%B0%E5%A5%87%E6%9D%AD/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/TyporaImg/image-20220819191629270.png)
+     ![image-20220819191629270](../../../TyporaImg/image-20220819191629270.png)
 
 
 
