@@ -12,7 +12,7 @@ sudo docker pull rabbitmq:3.8.2-management
 sudo docker images
 ```
 
-<img src="C:/Users/22489/OneDrive/%E7%94%B0%E5%A5%87%E6%9D%AD/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/TyporaImg/image-20220529100234082.png" alt="image-20220529100234082" style="zoom:150%;" />
+<img src="../../../TyporaImg/image-20220529100234082.png" alt="image-20220529100234082" style="zoom:150%;" />
 
 3、启动`Docker`容器
 
